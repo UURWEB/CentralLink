@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CentralLink Content Installer</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { padding: 24px; }
+    .installer { width: min(820px, 100%); margin: auto; }
+    .installer .page-body { line-height: 1.6; }
+    #install-log { min-height: 160px; padding: 12px; color: #b9ffc9; background: #061109; border: 1px solid #31563a; font-family: "Courier New", monospace; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <main class="installer">
+    <section class="page-card">
+      <div class="page-header">
+        <h1>CentralLink Official Content Installer</h1>
+        <p>Creates company pages, message boards, fictional profiles, public clues, and the murder-mystery ARG.</p>
+      </div>
+      <div class="page-body">
+        <p><b>Administrator access is required.</b> Sign in with the CentralLink administrator account, then install the starter network content.</p>
+        <div id="installer-auth">
+          <form id="installer-login" class="auth-form active">
+            <label>Email<input id="installer-email" type="email" required></label>
+            <label>Password<input id="installer-password" type="password" required></label>
+            <button class="primary-btn" type="submit">Administrator Login</button>
+          </form>
+        </div>
+        <div id="installer-controls" class="hidden">
+          <p>Signed in as <b id="installer-user"></b></p>
+          <button id="install-button" class="primary-btn">Install / Refresh CentralLink Content</button>
+          <a class="secondary-btn" href="index.html#admin">Return to CentralLink</a>
+        </div>
+        <h2 class="section-heading">Installation Log</h2>
+        <div id="install-log">Waiting for administrator login...</div>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="setup.js"></script>
+</body>
+</html>
